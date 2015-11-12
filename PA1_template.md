@@ -48,7 +48,7 @@ stepsPerDay <- aggregate(steps ~ date, data, sum)
 hist(stepsPerDay$steps, main = paste("Total Steps Each Day"), col=terrain.colors(6), xlab="Number of Steps")
 ```
 
-<img src="Reproducible_research_assignment_1_files/figure-html/unnamed-chunk-2-1.png" title="" alt="" width="672" />
+<img src="PA1_template/unnamed-chunk-2-1.png" title="" alt="" width="672" />
 
 ```r
 rmean <- mean(stepsPerDay$steps)
@@ -69,7 +69,7 @@ stepsByInterval <- aggregate(steps ~ interval, data, mean)
 plot(stepsByInterval$interval,stepsByInterval$steps, type="l", xlab="Interval", ylab="Number of Steps",main="Average Number of Steps per Day by Interval")
 ```
 
-<img src="Reproducible_research_assignment_1_files/figure-html/unnamed-chunk-3-1.png" title="" alt="" width="672" />
+<img src="PA1_template/unnamed-chunk-3-1.png" title="" alt="" width="672" />
 
 ```r
 maxInterval <- stepsByInterval[which.max(stepsByInterval$steps),1]
@@ -104,7 +104,7 @@ hist(stepsPerDay$steps, main = paste("Total Steps Each Day"), col=brewer.pal(5, 
 legend("topright", c("Imputed", "Non-imputed"), col=c(brewer.pal(5, "PuBu")[4], col=brewer.pal(5, "Oranges")[4]), lwd=10)
 ```
 
-<img src="Reproducible_research_assignment_1_files/figure-html/unnamed-chunk-6-1.png" title="" alt="" width="672" />
+<img src="PA1_template/unnamed-chunk-6-1.png" title="" alt="" width="672" />
 
 Calculate new mean and median for imputed data. 
 
@@ -147,4 +147,4 @@ ggplot(averagedActivityDataImputed, aes(interval, steps)) +
     ylab("avarage number of steps")
 ```
 
-<img src="Reproducible_research_assignment_1_files/figure-html/unnamed-chunk-10-1.png" title="" alt="" width="672" />
+<img src="PA1_template/unnamed-chunk-10-1.png" title="" alt="" width="672" />
